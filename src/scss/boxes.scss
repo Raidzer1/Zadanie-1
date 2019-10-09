@@ -1,0 +1,70 @@
+@import "variables";
+@import "responsive";
+
+.boxes {
+  display: flex;
+  margin: 20px 10%;
+
+  @include respond-to(medium) {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+  }
+
+  &__smallBoxHolder {
+    display: flex;
+    flex-direction: column;
+    margin: -10px 30px 0 0;
+
+    @include respond-to(medium) {
+      flex-direction: initial;
+      margin: initial;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__smallBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $smallBox--background;
+    width: 200px;
+    height: 200px;
+    margin: 10px 0;
+
+    p {
+      max-width: 90%;
+    }
+
+    @include respond-to(medium) {
+      width: 49.3%;
+
+      &:first-child {
+        margin-right: 1.4%;
+      }
+
+      &:last-child {
+        width: 100%;
+      }
+    }
+
+    @include respond-to(small) {
+      width: 100%;
+
+      &:first-child {
+        margin-right: initial;
+      }
+    }
+  }
+
+  &__bigBox {
+    height: 110%;
+    width: 100%;
+    background: $bigBox--background;
+
+    @include respond-to(medium) {
+      height: 80vh;
+    }
+  }
+}

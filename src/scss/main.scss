@@ -1,0 +1,19 @@
+@import "reset";
+@import "variables";
+@import "responsive";
+@import "header";
+@import "boxes";
+@import "article";
+@import "footer";
+
+* {
+  box-sizing: border-box;
+  color: $main-font;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 370px;
+}

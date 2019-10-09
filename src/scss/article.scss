@@ -1,0 +1,19 @@
+@import "variables";
+@import "responsive";
+
+.article {
+  background-color: $articleBox--background;
+  width: 100%;
+  height: 270px;
+  margin-top: 70px;
+
+  @include respond-to(medium) {
+    margin-top: 10px;
+  }
+
+  &__second {
+    background-color: $bigBox--background;
+    height: 380px;
+    margin: 30px;
+  }
+}
